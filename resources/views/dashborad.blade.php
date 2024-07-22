@@ -1,4 +1,3 @@
-
 @extends('layout.layout')
 
 @section('title')
@@ -7,12 +6,12 @@
 @section('content')
     <div class="card">
         <div class="card-header text-center">
-            <h1>Authentication</h1>
+            <h1>Welcome  {{Auth::user()->name}}</h1>
         </div>
         <div class="card-body">
             <div class="text-center">
-                <a href="/register" type="button" class="btn btn-primary">Register</a>
-                <a href="/login" type="button" class="btn btn-primary">Login</a>
+                <a href="/" type="button" class="btn btn-primary">Go To Inner Page</a>
+                <a href="{{route('logout')}}" type="button" class="btn btn-primary">Logout</a>
             </div>
         </div>
     </div>
